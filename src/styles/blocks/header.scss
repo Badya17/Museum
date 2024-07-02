@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  background-image: url(../images/background-mobile.png);
+  background-size: cover;
+  background-position: center;
+  padding: 10px 20px;
+
+  // &__frame {
+
+  // }
+
+  &__top {
+    display: flex;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__bottom {
+
+  }
+}
+
