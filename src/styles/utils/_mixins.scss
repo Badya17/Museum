@@ -4,3 +4,18 @@
     #{$_property}: $_toValue;
   }
 }
+
+
+@mixin contentPadding() {
+  padding: 27px 20px;
+
+  @include onTablet {
+    padding: 39px 34px;
+  }
+}
+
+@mixin onTablet {
+  @media (min-width: 640px) {
+    @content
+  }
+}

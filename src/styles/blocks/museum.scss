@@ -1,0 +1,66 @@
+.museum {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  @include contentPadding;
+
+  &__title {
+    padding: 0;
+    margin: 0;
+    font-family: $title-font;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 45px;
+    text-align: center;
+    color: black;
+  }
+
+  &__tickets-container {
+    background-image: url(../images/icons/frame.svg);
+    height: 50px;
+    width: 280px;
+  }
+
+  &__tickets {
+    position: relative;
+    display: flex;
+    margin: 0;
+    height: 100%;
+    width: calc(280px - 50px);
+    align-items: center;
+    justify-content: center;
+    font-family: $main-font;
+    color: $title-color;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    overflow: hidden;
+    text-decoration: none;
+
+    &::after {
+      display: block;
+      background-color: #1A5A4C;
+      content: '';
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      transition: 0.5s all ease;
+      transform: translateX(-100%);
+      z-index: 0;
+    }
+
+    &:hover::after {
+      transform: translate(0);
+        .museum__tickets {
+          z-index: 100;
+        }
+    }
+
+    &:hover {
+    }
+  }
+}
+

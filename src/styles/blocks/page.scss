@@ -1,8 +1,30 @@
-// html {
+.page {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
 
-// }
+  &__menu:target{
+    opacity: 1;
+    pointer-events: all;
+    top: 0;
+  }
 
-body {
-  background: $c-gray;
-  margin: 0;
+  &__menu{
+    position: fixed;
+    top: -100%;
+    left: 0;
+    right: 0;
+    opacity: 0;
+
+    pointer-events: none;
+    transition: 0.5s ease;
+  }
+
+  &__body {
+    background: $c-gray;
+    margin: 0;
+    padding: 0;
+  }
 }
+
+

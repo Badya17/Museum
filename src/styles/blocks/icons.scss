@@ -1,13 +1,30 @@
 .icon {
+  display: block;
+  width: 24px;
+  height: 24px;
 
   &--menu {
-    background-image: url(/src/images/icons/burger-menu-mobile.png);
-    width: 24px;
-    height: 24px;
+    background-image: url(/src/images/icons/burger-menu.png);
+    background-size: cover;
   }
 
   &--logo {
+    background-size: cover;
     width: 55px;
     height: 61px;
+
+    @include onTablet {
+      width: 220px;
+      height: 75px;
+    }
+  }
+
+
+  &--close {
+    background-size: cover;
+    background-image: url(/src/images/icons/icon-close.png);
+
+    width: 24px;
+    height: 24px;
   }
 }
