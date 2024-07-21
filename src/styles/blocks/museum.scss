@@ -1,11 +1,29 @@
 .museum {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  --columns: 2;
+
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
   gap: 20px;
-  @include contentPadding;
+
+  @include on-tablet {
+    --columns: 3;
+    row-gap: 38px;
+  }
+
+  @include on-desctop {
+    --columns: 12;
+    row-gap: 89px;
+  }
+
+  grid-column: 1 / -1;
+
+  @include on-tablet {
+    grid-column: 1 / 4;
+  }
+
 
   &__title {
+    grid-column: 1 / -1;
     padding: 0;
     margin: 0;
     font-family: $title-font;
@@ -14,12 +32,16 @@
     line-height: 45px;
     text-align: center;
     color: black;
+
+    grid-column: 1 / -1;
   }
 
   &__tickets-container {
+    grid-column: 1 / -1;
     background-image: url(../images/icons/frame.svg);
     height: 50px;
     width: 280px;
+    text-decoration: none;
   }
 
   &__tickets {
@@ -36,7 +58,6 @@
     font-weight: 500;
     line-height: 16px;
     overflow: hidden;
-    text-decoration: none;
 
     &::after {
       display: block;
@@ -49,17 +70,16 @@
       top: 0;
       transition: 0.5s all ease;
       transform: translateX(-100%);
-      z-index: 0;
+      z-index: -1;
     }
 
     &:hover::after {
       transform: translate(0);
-        .museum__tickets {
-          z-index: 100;
-        }
     }
 
     &:hover {
+      transition: 0.5s all ease-in;
+      color: #fff;
     }
   }
 }

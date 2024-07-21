@@ -5,17 +5,14 @@
   }
 }
 
-
-@mixin contentPadding() {
-  padding: 27px 20px;
-
-  @include onTablet {
-    padding: 39px 34px;
+@mixin on-tablet {
+  @media (min-width: 640px) {
+    @content;
   }
 }
 
-@mixin onTablet {
-  @media (min-width: 640px) {
-    @content
+@mixin on-desctop {
+  @media (min-width: 1280px) {
+    @content;
   }
 }

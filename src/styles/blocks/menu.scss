@@ -1,14 +1,16 @@
 .menu {
-  font-family: $main-font;
-  color: #fff;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   height: auto;
   background-color: #1A5A4C;
-  @include contentPadding;
+
+  &__content {
+    font-family: $main-font;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   &__top {
     display: flex;

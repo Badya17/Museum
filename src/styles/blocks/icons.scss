@@ -1,5 +1,5 @@
 .icon {
-  display: block;
+  display: inline-block;
   width: 24px;
   height: 24px;
 
@@ -8,23 +8,8 @@
     background-size: cover;
   }
 
-  &--logo {
-    background-size: cover;
-    width: 55px;
-    height: 61px;
-
-    @include onTablet {
-      width: 220px;
-      height: 75px;
-    }
-  }
-
-
   &--close {
     background-size: cover;
-    background-image: url(/src/images/icons/icon-close.png);
-
-    width: 24px;
-    height: 24px;
+    background-image: url(../images/icons/icon-close.png);
   }
 }
