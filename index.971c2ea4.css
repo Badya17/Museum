@@ -1,0 +1,291 @@
+h1 {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  src: url("Roboto-Regular-webfont.015d4426.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.page {
+  box-sizing: border-box;
+}
+
+.page__menu {
+  opacity: 0;
+  pointer-events: none;
+  transition: all .5s;
+  position: fixed;
+  top: -100%;
+  left: 0;
+  right: 0;
+}
+
+.page__menu:target {
+  opacity: 1;
+  pointer-events: all;
+  top: 0;
+}
+
+.page__body {
+  background: #eee;
+  margin: 0;
+  padding: 0;
+  font-family: IBM Plex Sans, sans-serif;
+}
+
+.page__content {
+  --columns: 2;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  column-gap: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: grid;
+}
+
+@media (width >= 640px) {
+  .page__content {
+    --columns: 6;
+    column-gap: 30px;
+    padding-left: 34px;
+    padding-right: 34px;
+  }
+}
+
+@media (width >= 1280px) {
+  .page__content {
+    --columns: 12;
+    padding: 0 55px;
+  }
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+}
+
+.icon--menu {
+  background-image: url("burger-menu.3deb22fb.png");
+  background-size: cover;
+}
+
+.icon--close {
+  background-image: url("icon-close.6f3ede5c.png");
+  background-size: cover;
+}
+
+.header {
+  background-image: url("background-mobile.9ede7c81.png");
+  background-position: center;
+  background-size: cover;
+  grid-column: 1 / -1;
+  height: 300px;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+@media (width >= 640px) {
+  .header {
+    grid-column: 4 / -1;
+    height: 384px;
+    margin-left: -34px;
+    margin-right: -34px;
+  }
+}
+
+@media (width >= 1280px) {
+  .header {
+    grid-column: 5 / -1;
+    height: 655px;
+    margin-left: -55px;
+    margin-right: -55px;
+  }
+}
+
+.header__top {
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 20px 0;
+  display: flex;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+@media (width >= 640px) {
+  .header__top {
+    padding: 15px 34px 0;
+  }
+}
+
+@media (width >= 1280px) {
+  .header__top {
+    padding: 15px 55px 0;
+  }
+}
+
+.header__text-logo {
+  text-align: center;
+  color: #0f0e08;
+  margin-right: 40%;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+@media (width >= 640px) {
+  .header__text-logo {
+    margin-right: 30%;
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.menu {
+  background-color: #1a5a4c;
+  height: auto;
+}
+
+.menu__content {
+  color: #fff;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-family: IBM Plex Sans, sans-serif;
+  display: flex;
+}
+
+.menu__top {
+  border-bottom: 1px solid #fff;
+  gap: 28px;
+  width: 100%;
+  margin-bottom: 24px;
+  display: flex;
+}
+
+.menu__links {
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 24px;
+  display: flex;
+}
+
+.menu__link {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  text-decoration: none;
+}
+
+.menu__footer {
+  margin-right: auto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  display: inline-block;
+}
+
+.menu__schedule-title {
+  margin-bottom: 20px;
+}
+
+.menu__weekdays-schedule {
+  margin-bottom: 16px;
+}
+
+.museum {
+  --columns: 2;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-column: 1 / -1;
+  gap: 20px;
+  display: grid;
+}
+
+@media (width >= 640px) {
+  .museum {
+    --columns: 3;
+    row-gap: 38px;
+  }
+}
+
+@media (width >= 1280px) {
+  .museum {
+    --columns: 12;
+    row-gap: 89px;
+  }
+}
+
+@media (width >= 640px) {
+  .museum {
+    grid-column: 1 / 4;
+  }
+}
+
+.museum__title {
+  text-align: center;
+  color: #000;
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat, sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 45px;
+}
+
+.museum__tickets-container {
+  background-image: url("frame.f1254742.svg");
+  grid-column: 1 / -1;
+  width: 280px;
+  height: 50px;
+  text-decoration: none;
+}
+
+.museum__tickets {
+  color: #0f0e08;
+  justify-content: center;
+  align-items: center;
+  width: 230px;
+  height: 100%;
+  margin: 0;
+  font-family: IBM Plex Sans, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.museum__tickets:after {
+  content: "";
+  z-index: -1;
+  background-color: #1a5a4c;
+  width: 100%;
+  height: 100%;
+  transition: all .5s;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+}
+
+.museum__tickets:hover:after {
+  transform: translate(0);
+}
+
+.museum__tickets:hover {
+  color: #fff;
+  transition: all .5s ease-in;
+}
+
+.link {
+  text-decoration: none;
+}
+/*# sourceMappingURL=index.971c2ea4.css.map */
